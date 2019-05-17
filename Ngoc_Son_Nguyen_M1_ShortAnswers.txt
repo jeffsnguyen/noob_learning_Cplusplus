@@ -1,0 +1,20 @@
+Question 1
+- Reusability: Reuse same piece of code without having to write it again.
+- Cleanliness: Code is easier to read when repetitive function is written separately from the main code.
+- Troubleshooting: Easier to identify error and run test on self-contained functions.
+- Sharability: Easier for other programmers to use the same function without reading through the whole definition.
+- Easier to make change: One can change the definition to make the function do other thing (for example, adding error handling) without breaking the main code.
+
+Question 2
+Prototypes allow separation of interface from implementation. This is important in large scale projects where there is a lot of file involved. It allows the compiler to identify that the function exist somewhere and not throw an error.
+Compilers also read top-down so functions' prototypes alert the compilers that the definition of a custom function exists somewhere either down the lines or in another file location.
+
+Question 3
+It saves some typing by allowing programmers to use names defined in the stf namespace without using the std:: prefix.
+
+Question 4
+No limits. Some platform such as Microsoft C++ has 2048 characters limit.
+
+Question 5
+- Because float type takes up more memory. 
+- Because comparison of 2 float variables is not as straight forward as that of 2 int variables.
