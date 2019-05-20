@@ -1,0 +1,34 @@
+I don't have an example from my work but here is how I visualize its usage in a real world scenario based on the lecture example.
+
+ 
+
+Suppose a bond exchange maintains their products with the following information:
+
+- Bond Name (example: 10 years US Treasury)
+
+- Bond symbol (example: ZN)
+
+- Previous open price: 124.51
+
+- Previous close price: 124.51
+Suppose the exchange do transactions based on those information: buy, sell. view, chart. Part of this process is to get the information using:
+
+fscanf(fp, "%s" %s % f %f", &bond_name, &bond_symbol, &open_price, &close_price);
+If the function is called repeatedly, changing structure of one of the component will be difficult as changes will need to be made to each function thorough the program.
+
+Instead, we can use struct to abstract the data from the physical implementation:
+
+struct {
+
+               char bond_name[40];
+
+               char bond_symbol[10];
+
+               float open_price;
+
+               float close_price;
+
+} INFO
+An example of a read function can be as:
+
+void read_info(FILE *fp, INFO);
