@@ -1,0 +1,36 @@
+Question 1
+Reason for using multiple modules:
+1. Reusability: From a developer's perspective, they can reuse code for different purposes.
+2. Sharability: From a developer's perspective, they can share the same code to collaborate.
+3. Independence: Multiple developers can debug pieces of the whole program indepently. This improve project delivery.
+4. Readbility: Codes in each modules are shorter, simpler and easier to understand.
+5. Scope: Variables's scoping can be controlled easier.
+
+The .h extension signals that the file is a header file. The .cpp extension signals that the file is a source (implementation file).
+This level of data abstraction which separating the files into different class enable more streamline and improve speed of debug and maintenance as compilers do not need to recompiled file that is unchanged.
+It is also useful for files organization purpose and is also easier to read.
+
+Question 2
+1. Assignment: A pointer can be reassigned to take on a different variable. A reference cannot be reassigned and must be assigned value at initialization.
+2. Memory Address: A pointer has its own memory address that can be deference and pointed to a different memory address of another variable. A reference variable has the same address of the original variable that cannot be refered to as one could with pointer.
+3. Null value: Pointer can be NULL. Reference cannot be NULL, it alsways has to be pointed to an object.
+4. Type: Pointer is a type of object, reference is not. Reference can only be variable.
+5. Indirection: Pointers can be pointed to multiple other pointers. References can only be assigned value of another reference, they cannot be pointed to another reference.
+
+Question 3
+Const is used when one do not want the variable or function to be changed in value. Some of the benefits are:
+- Readability: It shows clearly that the function that reference the const variable is only there to display the variables, not changing them. This makes it easier to read for a developer perspective.
+- Error handling: Better error handling from a compiler perspective if a function that calls on a const variable attempt to modify the data.
+
+For example, a stock exchange software can have the "circuit breaker" (to halt trading if the index lose more than 4.5% value in a trading session) variable as a constant.
+It is important that such variable is not changed under any circumstances as it will otherwise wreak havocs on the financial system.
+
+Question 4
+Function overloading enables a function to have multiple definitions.
+When to use function overloading: When the function does very similar tasks with slightly different parameters. This level of data abstraction is useful from a programmers perspective.
+For example: A stock search function can search stock information by company name, ticker symbol, closing price etc. The programmer only needs to think: search a stock instead of 
+deeper level of implementation: search stock by company name, search stock by ticker symbol, search stock by closing price, etc.
+
+Question 5
+- Using declaration: Declare the entity (for example, inside a function). It instructs the compiler to locate all occurence of one name in the specified namespace as if the fully qualified name were supplied.
+- Using directive: (using namespace) enables the name from the namespace to be available for regular lookup. It instructs compiler to recognize all members of a namespace and not just one. 
