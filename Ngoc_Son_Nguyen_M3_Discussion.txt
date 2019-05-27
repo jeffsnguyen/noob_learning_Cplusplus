@@ -1,0 +1,45 @@
+One real world implementation of a C++ structure: a weekly calendar that display your events.
+
+struct calendar_week
+{
+char day_name[10] = {'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'};
+int day, month, year;
+int hour_start, hour_end;
+int minute_start, minute_end;
+char event_name[50];
+};
+
+One real world implementation of a C++ class with at least 3 hierarchies: smart home device organizer
+
+class Alexa //base class, controll all devices
+{
+private:
+	int device_id[100] = {}; //Numerical ID of the device.
+	char device_name[100] = {}; //Name of device in human language
+public:
+	void get_device_name(); //Obtain name of device
+	void turn_on(device_id); //Turn on device
+	void turn_off(device_id); //Turn off device
+};
+
+class Hue //derived from Alexa, control lighting
+{
+public:
+	void change_light_color(device_id); //Change color of device
+	void change_light_brightness(device_id); //Change brightness of device
+};
+
+class Music //derived from Alexa, control music
+{
+public:
+	void increase_vol(device_id); //Increase volume of device
+	void decrease_vol(device_id); //Decrease volume of device
+	void play_playlist(device_id, int playlist_id); //Play a playlist
+};
+
+class Nest //derived from A, control temperature
+{
+public:
+	void increase_temp(device_id); //Increase temperature
+	void decrease_temp(device_id); //Decrease temperature
+};

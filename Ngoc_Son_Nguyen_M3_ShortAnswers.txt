@@ -1,0 +1,49 @@
+Question 1
+
+Class
+Definition: A class is a blueprint of collection of similar objects type defined by users with member variable and function. 
+Example: For example, Car is a class.
+Memory Allocation:  Does not allocate memory upon creation.
+
+Object
+Definition: An object is simply an instance of a class. 
+Example: For example, Mercedes is an object that is an instance of the Car class.
+Memory Allocation: Consume memory.
+
+Question 2
+The main issue here is complexity.
+Public data member can be accessed from potentially anywhere. This is problematic and time-consuming to debug.
+Private data member can only be accessed by class member functions, which are usually contained to a single source file. This makes debugging easier and quicker.
+
+The other issue is dependencies. Keeping data members private enables to original programmer to freely update their code without affecting other dependent users.
+This enable other users to build on top of the provided interface to access the original programmer's code without having to depend on "how" the code was implemented.
+
+Question 3
+Similarties:
+Both structures and classes can havea mix of public, private and protected data member, member functions and can have inheritances.
+
+Differences:
+Structures have default public data member. Classes have default private data member.
+
+When to use structures:
+Use struct if the data are simple:
+- The data logically represent a single value, similar to primitive types (int, double, etc.)
+- The data has an instance size under 16 bytes.
+- The data is immutable.
+- The data does not have to be boxed frequently.
+
+When to use classes: Every other time
+
+Question 4
+
+Advantages:
+- Simplicty: Simple if the default parameters are unlikely to be changed.
+- Time Reduction: Save time by providing default common initial values instead of having to specify them every time
+- Reliability: You know exactly what the function will do because there is only 1 function.
+
+Disadvatange:
+- Restrictive: There cannot be one default value for several argument at the same time.
+- Maintenance: Default parameters are baked in and is cumbersome to update (for example: requires code recompliation from client's end).
+
+Question 5
+Because it can do something completely different than anticipated. While it makes the code more intuitive from the user perspective, it is problematic to maintain from a programmer's persepctive.
