@@ -1,0 +1,28 @@
+Question 1
+Advantages of new over malloc
+- new automatically compute object's size, eliminate the need to use sizeof.
+- new automatically returns the appropriate pointer type, eliminate the need to use a type cast.
+- new enable object initializing while initialize the memory space.
+- new can be overloaded.
+
+Question 2
+Because it creates a copy of the object, it usually has the ampersand sign like so:
+StringBad(const StringBad &);
+
+This is to indicate it is referencing the object.
+
+Question 3
+Differences:
+- The copy constructor initialize the new object with an existing object. The assignment operator deals with two existing object, assign the value of one to the other.
+- The copy constructor gives different memory allocation to objects. The assignment operator gives the same memory allocation to both objects.
+
+Question 4
+- A copy constructor is invoked whenever a new object is created and initialized to an existing object of the same kind. This happens in several situations. The most obvious situation is when you explicitly initialize a new object to an existing object.
+- Copy constructor can be used to generate temporary objects whose contents are assigned to different variables.
+- Compilers also use copy constructors when it generates a copies of an object, for example when a function passes an object by value or returns an object.
+
+Question 5
+Becayse dynamic_array is a pointer being assigned the memory address of a array object (not a function). It's not an actual int variable so it is compatible.
+
+
+
