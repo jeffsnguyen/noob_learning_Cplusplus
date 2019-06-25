@@ -1,0 +1,28 @@
+Question 1
+Naturally, operator float() has to return float. It's not necessary or allowed
+to write a speicifc return type for such operator.
+
+Question 2
+It is a problem in practice. For example, the owner of a software might want to restrict
+client's access to code via SDK in order to protect the integrity of the system.
+In this case, the clients will have to perform conversion with the code for destination class
+being unavailable.
+
+Question 3
+Yes. For example, implicit conversion can be prevented by using an value-overload function that 
+poison the overload set for implicit conversion.
+
+Question 4
+Because the compiler must choose how to automatically perform a type conversion, 
+it can get into trouble if the conversion is not designed correctly
+For example, a class X that can automatically convert itself to an object of class Y with 
+an operator Y( ) . If class Y has a constructor that takes a single argument of type X
+, this represents the identical type conversion. 
+The compiler now has two ways to go from X to Y. Therefore, it will generate an error 
+of ambiguity when the conversion is performed.
+
+Question 5
+Passing by value involves generating a termporary copy of the returned object. This creates
+unnecessary time cost of calling a copy constructor to generate the copy and calling the destructor
+to delete the copy. Returning by reference saves time and memory use.
+
