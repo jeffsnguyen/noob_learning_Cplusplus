@@ -1,0 +1,47 @@
+Question
+Identify at least two issues or difficulties you have experienced implementing the 
+C++ concepts for this course and how you resolved them.
+
+Answer
+Issue 1: Type value return.
+
+In the EnglishWeight assignment, I had a problem returning a double type value 
+assigning a double type variable to a calculation.
+
+Return int value, even though pounds and ounces are double type.
+divide = (16 * pounds + ounces) / (16 * w.pounds + w.ounces); //Convert to ounces then do the division
+It took a lots of googling and visiting stack overflow for me to figure out 
+that the divisor and the dividend part of the calculation needs to be 
+specifically assigned a double type for the calculation to return a double type.
+
+Return double value:
+double oz1, oz2;
+oz1 = (16 * pounds) + ounces; //Convert to ounces then do the division
+oz2 = (16 * w.pounds) + w.ounces; //Convert to ounces then do the division
+divide = lbs1 / lbs2; 
+ 
+
+Issue 2: Handling division by 0
+
+Exception handling has always been frustrating me as a user seeing how poorly 
+developers handling the most primitive user's error that leads to costly vulnerability. In this course, it was challenging to learn to handle the basic exception of division by 0.
+
+Again, google came to the rescue and I discovered try-block which is 
+extremely handy in handling any type of exception without complicated nested ifs.
+
+For example, in the stack assignment:
+
+try
+{
+Stack1.pop(pop_val);
+if (Stack1.size() > 10)
+{
+throw 2;
+}
+}
+catch (int x)
+{
+std::cout << "Stack underflow" << std::endl;
+exit(2);
+}
+
