@@ -1,0 +1,27 @@
+Hierarchies 1
+
+1-                                               Mobile Phones
+
+2- Apple iPhone,                 Google Pixel,                  Samsung Galaxy
+
+3- XS, XS Max, XR             Pixel, Pixel XL                 Fold, S10
+
+ 
+
+Hierarchies 2
+
+1-                                                Car
+
+2- Mercedes,                         BMW ,                           Tesla
+
+3- S-Class, E-class             M2, M4                  Model S, Model 3, Model X
+
+ 
+
+Hierarchies 3
+
+1- Federal Government
+
+2- State Government
+
+3- Muncipalities Governing Bodies
