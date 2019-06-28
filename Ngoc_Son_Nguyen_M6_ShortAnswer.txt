@@ -1,0 +1,31 @@
+Question 1
+Protected members, unlike private members, are accessble in the class that defines them 
+and in classes that inherit from that class. Protected members facilitates reuse of codes by allowing
+developers of the derived class to access their member.
+
+
+Question 2
+Protected members facilitating reuse of codes. Private members make it cumbersome and costly to reuse
+its member. If the developers of the derived class can be trust, i.e. developers on the same team, then
+the use of protected members is preferred to private members. This increase development speed and reduce
+costs.
+
+
+Question 3
+When constructing an object of a derived type, is a base class constructor always invoked? Explain.
+Yes, the constructor of the derived class gets called after the constructor of the base class. This is 
+because the constructors of each type in the type hierarchy will be called in other of Most Base -> Most Derived.
+
+
+Question 4
+Wrong. When a derived object is called:
+1- Memory of derived object is set aside.
+2- Derived constructor is invoked.
+3- Base object is constructed first via base constructor.
+4- Variables are initialized.
+
+Execution order is different: base class executed first then derived.
+
+Question 5
+Each classes with a virtual method have a single vtable that is shared by all objects. It is wasteful
+in terms of resources to assign each object with its own vtable.
