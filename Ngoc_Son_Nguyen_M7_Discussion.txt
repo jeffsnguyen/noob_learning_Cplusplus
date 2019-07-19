@@ -1,0 +1,26 @@
+1.  Hierarchy:  car and car parts. 
+For example: 
+Car -> Engine/ Suspension/Aero
+
+There is one engine member contains in every Car object and client cannot convert Car* to Engine*
+
+class Car : private Engine // Car has-a Engine
+{ 
+public:        
+	Car() : Engine(8) { } // Initializes this Car with 8 cylinders           
+	Engine::start; // Start this Car by starting its Engine};
+
+2. 
+class SkyOperator{}; // can operate in the air: airplanes, helicopter
+class WaterOperator{} // can operate on the water: boat, cruiseship
+class SeaPlane{} : public SkyOperator, public: WaterOperator; // can operate both in the air and on the water
+
+3. 
+class Book //ADT
+class TelephoneBook : public Book //Implementation
+
+class Number //ADT
+class Integers : public Number //Implementation
+
+class CabinClass //ADT
+class FirstClass : public CabinClass //Implementation
