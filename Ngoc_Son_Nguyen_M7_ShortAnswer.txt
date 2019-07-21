@@ -1,0 +1,10 @@
+Question 1
+A pure vitural function is a virtual function whose declaration ends in =0
+
+Question 2
+The designer can declare a new class and specify objects and functions needed to be associate with the new ADT.
+Application programmer cannot declare an object that is an ADT (private information), the compiler will issue an error.
+
+Question 3
+The compiler does not know which member the programmer refer to. 
+One way to solve this is to call the member through pointers to the base class and specify which class.
