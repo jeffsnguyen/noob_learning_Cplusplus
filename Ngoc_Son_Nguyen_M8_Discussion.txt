@@ -1,0 +1,3 @@
+1. One of my experience is the common "division by zero" error. Without error handling, the program will output infinity value which cannot be further processed and is not meaningful to the user to take action.
+
+2. One of the best mechanism of error handling is anticipating the error via the try-catch method.
