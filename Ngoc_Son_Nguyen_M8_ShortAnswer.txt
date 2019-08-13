@@ -1,0 +1,22 @@
+Question 1
+They are, in general, not safe to be used in C++ as they effectively replicate the exception's behavior
+without destroying the stacks. This is unsatisfactory in C++.
+
+Question 2
+Yes, the exception class will be the base class and be associated with different type of objects via
+derived classes.
+
+Question 3
+1. Anticipating the user behavior that cause the error, ie. trying to break the program yourself.
+This is not easy for the programmers as they are often biased.
+2. When complexity and size of code increase, error handling becomes much harder.
+3. Collaboration between multiple programmers make cross- error handling difficult.
+4. It is almost possible to cover all exceptional case. Designing a gracefulerror-handling that can tolerate 
+most errors is difficult.
+
+Question 4
+No. The catch block would be useless as there is no exception from the try block to catch.
+
+Question 5
+1. scalar division function to divide weight by a number: check for division by 0.
+2. general: negative weight entry
